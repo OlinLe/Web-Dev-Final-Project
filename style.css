@@ -1,0 +1,322 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+body {
+  background: #0b1020;
+  color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #12172a;
+  border-bottom: 1px solid #222842;
+}
+
+.site-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.site-header p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.container {
+  flex: 1;
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  padding: 0 1rem 2rem;
+  width: 100%;
+}
+
+/* --- Search Panel --- */
+.search-panel {
+  background: #151a30;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #222842;
+}
+
+#searchForm {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+#playerInput {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #222842;
+  background: #101426;
+  color: #f5f5f5;
+  width: 100%;
+}
+
+#searchForm button {
+  padding: 0.65rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#searchForm button:hover {
+  background: #2563eb;
+}
+
+.status-message {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+  color: #94a3b8;
+}
+
+/* Compare bar */
+.compare-bar {
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  background: #101426;
+  border: 1px solid #222842;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+#compareStatus {
+  font-weight: 600;
+  color: #fbbf24;
+}
+
+#compareNames {
+  flex: 1;
+  margin: 0 0.5rem;
+  opacity: 0.9;
+}
+
+#clearCompareBtn {
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  border: none;
+  background: #334155;
+  color: #f5f5f5;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+/* --- Results --- */
+#resultsSection h2, #fantasySection h2, #comparisonSection h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  border-left: 4px solid #3b82f6;
+  padding-left: 0.75rem;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.player-card {
+  background: #1e293b;
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid #334155;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.player-card h3 {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.player-meta {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  background: #0f172a;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.player-stats-list {
+  list-style: none;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.player-stats-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.15rem 0;
+  border-bottom: 1px solid #334155;
+}
+
+.btn-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+.compare-btn, .draft-btn {
+  flex: 1;
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.compare-btn {
+  background: #334155;
+  color: white;
+}
+.compare-btn:hover { background: #475569; }
+
+.draft-btn {
+  background: #10b981;
+  color: white;
+}
+.draft-btn:hover { background: #059669; }
+
+/* --- Fantasy Roster Section --- */
+.fantasy-section {
+  margin-top: 2rem;
+  background: #151a30;
+  border: 1px solid #222842;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.fantasy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.fantasy-summary span {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  background: #1e293b;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #334155;
+}
+
+.roster-container {
+  overflow-x: auto;
+}
+
+#rosterTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+#rosterTable th, #rosterTable td {
+  text-align: left;
+  padding: 0.75rem;
+  border-bottom: 1px solid #334155;
+}
+
+#rosterTable th {
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.remove-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+.remove-btn:hover { background: #dc2626; }
+
+/* --- Comparison Section --- */
+.comparison-section {
+  margin-top: 2rem;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.compare-card {
+  background: #1e293b;
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid #334155;
+}
+
+.compare-stats-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #334155;
+  font-size: 0.9rem;
+}
+
+
+.stat-winner {
+  color: #4ade80;
+  font-weight: 800;
+}
+
+
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #0f172a;
+  color: #64748b;
+  margin-top: auto;
+}
+
+@media (max-width: 600px) {
+  #searchForm {
+    grid-template-columns: 1fr;
+  }
+  .compare-bar, .fantasy-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .fantasy-summary span {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+}

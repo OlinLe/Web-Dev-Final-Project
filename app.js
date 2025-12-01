@@ -1,6 +1,7 @@
 const NFL_STATS_URL =
-  "https://api.sportsdata.io/v3/nfl/stats/json/PlayerSeasonStats/2025REG";
+	"https://api.sportsdata.io/v3/nfl/stats/json/PlayerSeasonStats/2025REG?key=";
 const NFL_API_KEY = "Insert_Key";
+
 
 const searchForm = document.getElementById("searchForm");
 const playerInput = document.getElementById("playerInput");
