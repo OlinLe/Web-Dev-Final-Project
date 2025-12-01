@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NFL Player Stats & Fantasy Drafter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>NFL Stats & Fantasy Drafter</h1>
+    <p>Search 2025 Stats, Compare Players, and Build Your Team</p>
+  </header>
+
+  <main class="container">
+    <section class="search-panel">
+      <form id="searchForm">
+        <label for="playerInput">Player Name:</label>
+        <input
+          type="text"
+          id="playerInput"
+          placeholder="e.g. J.Herbert"
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+
+      <p id="statusMessage" class="status-message"></p>
+
+      <div id="compareBar" class="compare-bar">
+        <span id="compareStatus">Comparison Slots: 0 / 2</span>
+        <span id="compareNames"></span>
+        <button id="clearCompareBtn" type="button">Clear</button>
+      </div>
+    </section>
+
+    <section id="resultsSection">
+      <h2>Player Search Results</h2>
+      <div id="resultsContainer" class="results-grid"></div>
+    </section>
+
+    <section id="fantasySection" class="fantasy-section">
+      <div class="fantasy-header">
+        <h2>My Fantasy Roster</h2>
+        <div class="fantasy-summary">
+          <span>Players: <strong id="rosterCount">0</strong></span>
+          <span>Total Projected FPTS: <strong id="rosterTotalPts">0.00</strong></span>
+        </div>
+      </div>
+      
+      <div class="roster-container">
+        <table id="rosterTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Pos</th>
+              <th>Team</th>
+              <th>Fantasy Pts</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="rosterBody">
+            </tbody>
+        </table>
+        <p id="emptyRosterMsg" class="comparison-hint" style="margin-top: 1rem;">
+          Search for players above and click "Draft" to add them here.
+        </p>
+      </div>
+    </section>
+
+    <section id="comparisonSection" class="comparison-section">
+      <h2>Head-to-Head Comparison</h2>
+      <p class="comparison-hint">
+        Select two players to see who wins in specific stat categories.
+      </p>
+      <div id="comparisonGrid" class="comparison-grid">
+        </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Data from SportsData.io NFL Stats API (2025 Regular Season)</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
