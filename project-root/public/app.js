@@ -349,7 +349,7 @@ function renderRoster() {
   rosterTotalPts.textContent = totalPts.toFixed(2);
 }
 
-// --- Utilities ---
+// Utilities 
 
 function setStatus(msg) {
   statusMessage.textContent = msg;
