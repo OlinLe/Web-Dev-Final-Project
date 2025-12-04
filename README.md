@@ -1,36 +1,61 @@
-Final Project - CSCI Web Development
+**Final Project – CSCI Web Development**
 
-This project is a full-stack web application that allows users to search NFL players, compare two players head-to-head on key statistics, and draft players into a personal fantasy roster with projected PPR fantasy points.
-The application integrates a real NFL statistics API, served securely through a custom Express backend.
+This project is a full-stack web application that allows users to:
 
-Features:
+- Search NFL players
+- Compare two players head-to-head on major stats
+- Draft players to a personal fantasy roster
+- View projected PPR fantasy points calculated client-side
+
+The app uses live NFL player data from a third-party API and serves it securely through a custom Node/Express backend.
+
+**Features:**
 
 Player Search
-- Search any NFL player from the 2025 Regular Season.
-- Displays team, position, key stats, and projected fantasy points.
+- Search any NFL player from the 2025 Regular Season
+- Shows player name, team, position
+- Includes key offensive stats
+- Automatically calculates fantasy PPR projected points
 
 Head-to-Head Comparison
-- Select two players to compare.
-- Stats show green/red indicators for which player performed better.
-- Smooth scroll into comparison view.
+- Select up to two players
+- Category-by-category stat comparison
+- Green/red highlighting for winners/losers in each stat
+- Smooth scrolling to comparison section
 
 Fantasy Roster Builder
-- Add any player to your roster.
-- Shows roster count and total projected fantasy points.
-- Remove players individually.
-- Automatically caches player data to improve performance.
+- Add/remove players to your roster
+- Auto-updates total projected fantasy points
+- Prevents adding duplicate players
+- Uses LocalStorage caching for fast repeat loading
 
-Tech Stack
+**Tech Stack**
 
-Frontend: 
-HTML / CSS / JavaScript
-LocalStorage caching
+Frontend:
+
+- HTML / CSS
+- JavaScript
 
 Backend:
-Node.js
-Express.js
-node-fetch
-dotenv
+
+- Node.js
+- Express.js
+- node-fetch
+- dotenv for secure API keys
+- Custom /api/nfl-stats endpoint
 
 External API:
-SportsData.io (NFL Stats 2025 Regular Season)
+SportsData.io – NFL Player Season Stats (2025REG)
+Authentication handled server-side using .env
+
+Running the Project Yourself:
+
+git clone https://github.com/OlinLe/Web-Dev-Final-Project.git
+
+cd Web-Dev-Final-Project/project-root
+
+npm install
+
+npm start 
+
+(Make sure to create a .env file in project-root/ with: "NFL_API_KEY=your_api_key_here")
