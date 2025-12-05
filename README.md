@@ -59,3 +59,5 @@ npm install
 npm start 
 
 (Make sure to create a .env file in project-root/ with: "NFL_API_KEY=your_api_key_here")
+
+Project Members: Olin Leigland and Matt Thomas
