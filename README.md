@@ -1,5 +1,7 @@
 **Final Project – CSCI Web Development**
 
+CURRENT WORKING LINK: https://nfl-fantasy-comparison-tool.onrender.com
+
 This project is a full-stack web application that allows users to:
 
 - Search NFL players
